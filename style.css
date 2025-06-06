@@ -1,0 +1,433 @@
+:root {
+    --primary: #d32f2f;
+    --primary-light: #ff6659;
+    --primary-dark: #9a0007;
+    --background: #d32f2f;
+    --text: #ffffff;
+    --card-bg: rgba(255, 255, 255, 0.9);
+    --envelope-red: #b71c1c;
+    --envelope-dark-red: #7f0000;
+    --spotify-green: #1DB954;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--background);
+    color: var(--text);
+    line-height: 1.6;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+.floating-hearts {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+.couple-header {
+    background-color: var(--primary-dark);
+    color: white;
+    text-align: center;
+    padding: 3rem 1rem;
+    margin: 0 -20px 3rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.couple-names h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3.5rem;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.header-subtitle {
+    font-size: 1.2rem;
+    color: rgba(255,255,255,0.9);
+    font-weight: 600;
+}
+
+/* Player do Spotify */
+.music-player-section {
+    margin: 3rem 0;
+    text-align: center;
+}
+
+.section-title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.8rem;
+    margin-bottom: 2rem;
+    color: white;
+}
+
+.spotify-player {
+    max-width: 600px;
+    margin: 0 auto;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.spotify-link {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.spotify-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--spotify-green);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.spotify-button:hover {
+    background-color: #1ed760;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.spotify-button i {
+    margin-right: 10px;
+    font-size: 1.2em;
+}
+
+/* Cartinha de Amor */
+.love-letter-section {
+    margin: 3rem 0;
+}
+
+.love-letter {
+    background-color: var(--card-bg);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    padding: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+    color: #333;
+}
+
+.letter-content h2 {
+    font-family: 'Dancing Script', cursive;
+    color: var(--primary-dark);
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.letter-body {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.couple-photo {
+    flex: 1;
+    min-width: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.couple-photo img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.letter-text {
+    flex: 1;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.letter-text p {
+    margin-bottom: 1.5rem;
+}
+
+.signature {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.5rem;
+    text-align: right;
+    margin-top: 2rem;
+    color: var(--primary-dark);
+}
+
+/* Timeline */
+.timeline-section {
+    margin: 5rem 0;
+    padding: 0 1rem;
+}
+
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--primary), var(--primary-light));
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 3rem;
+    width: 100%;
+}
+
+.timeline-item:nth-child(odd) .timeline-content {
+    margin-left: auto;
+    text-align: right;
+    padding-right: 3rem;
+    padding-left: 0;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+    padding-left: 3rem;
+}
+
+.timeline-date {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--primary);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.timeline-content {
+    width: 45%;
+    padding: 1.5rem;
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    color: #333;
+}
+
+.timeline-content h3 {
+    color: var(--primary-dark);
+    margin-bottom: 0.8rem;
+}
+
+/* Envelopes de Memórias */
+.envelopes-section {
+    background-color: var(--primary-dark);
+    margin: 5rem -20px;
+    padding: 3rem 20px;
+    color: white;
+}
+
+.envelopes-section .section-title {
+    color: white;
+}
+
+.envelopes-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.memory-envelope {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    min-height: 300px;
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+.envelope-front-red {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--envelope-red);
+    border-radius: 10px;
+    z-index: 2;
+    transform-origin: bottom;
+    transition: transform 0.6s ease;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.envelope-front-red::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 0;
+    height: 0;
+    border-left: 200px solid transparent;
+    border-right: 200px solid transparent;
+    border-top: 100px solid var(--envelope-dark-red);
+    transform-origin: top;
+    transition: all 0.6s ease;
+    border-radius: 10px 10px 0 0;
+}
+
+.memory-envelope:hover .envelope-front-red {
+    transform: rotateX(180deg);
+}
+
+.memory-content {
+    position: relative;
+    width: 95%;
+    height: 95%;
+    background-color: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    top: 2.5%;
+    left: 2.5%;
+    z-index: 1;
+    color: #333;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.memory-photo {
+    flex: 1;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+
+.memory-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.memory-text h3 {
+    color: var(--primary-dark);
+    margin-bottom: 0.5rem;
+}
+
+/* Rodapé */
+.couple-footer {
+    text-align: center;
+    padding: 3rem 0;
+    margin-top: 3rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    color: white;
+}
+
+.couple-footer p {
+    margin-bottom: 0.5rem;
+}
+
+/* Animações */
+@keyframes heartbeat {
+    0% { transform: scale(1); }
+    25% { transform: scale(1.1); }
+    50% { transform: scale(1); }
+    75% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .couple-names h1 {
+        font-size: 2.5rem;
+    }
+    
+    .letter-body {
+        flex-direction: column;
+    }
+    
+    .couple-photo {
+        min-width: 100%;
+    }
+    
+    .timeline::before {
+        left: 30px;
+    }
+    
+    .timeline-item:nth-child(odd) .timeline-content,
+    .timeline-item:nth-child(even) .timeline-content {
+        width: calc(100% - 90px);
+        margin-left: 60px;
+        text-align: left;
+        padding: 1rem 1rem 1rem 2rem;
+    }
+    
+    .timeline-date {
+        left: 30px;
+        transform: translateX(0);
+    }
+    
+    .envelopes-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .memory-envelope {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .couple-names h1 {
+        font-size: 2rem;
+    }
+    
+    .section-title {
+        font-size: 2.2rem;
+    }
+    
+    .love-letter {
+        padding: 1.5rem;
+    }
+    
+    .letter-content h2 {
+        font-size: 2rem;
+    }
+    
+    .signature {
+        font-size: 1.3rem;
+    }
+    
+    .spotify-player {
+        height: 300px;
+    }
+}

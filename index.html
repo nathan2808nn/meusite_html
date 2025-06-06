@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para o Meu Amor</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@400;600&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Estilos atualizados para a seção de vídeo menor */
+        .video-section {
+            padding: 30px 0;
+            background-color: rgba(255, 255, 255, 0.8);
+            margin: 25px 0;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .video-container {
+            position: relative;
+            padding-bottom: 45%; /* Proporção ajustada para vídeo menor */
+            height: 0;
+            overflow: hidden;
+            max-width: 600px; /* Largura máxima reduzida */
+            margin: 0 auto;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            border: 5px solid #fff;
+            background-color: #000; /* Fundo preto para melhor contraste */
+        }
+        
+        .video-container iframe,
+        .video-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        .video-section-title {
+            text-align: center;
+            font-family: 'Dancing Script', cursive;
+            color: #d23669;
+            font-size: 2.2rem; /* Título um pouco menor */
+            margin-bottom: 20px;
+        }
+        
+        .video-description {
+            text-align: center;
+            max-width: 550px; /* Largura reduzida para combinar */
+            margin: 15px auto;
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #555;
+            padding: 0 15px;
+        }
+
+        /* Novo estilo para o álbum Polaroid */
+        .polaroid-album {
+            padding: 40px 0;
+            text-align: center;
+        }
+        
+        .polaroid-album h2 {
+            font-family: 'Dancing Script', cursive;
+            color: #d23669;
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+        }
+        
+        .polaroid-row {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+        
+        .polaroid {
+            background: white;
+            padding: 15px 15px 40px 15px;
+            width: 200px;
+            margin: 0 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transform: rotate(-2deg);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .polaroid:nth-child(even) {
+            transform: rotate(2deg);
+        }
+        
+        .polaroid:hover {
+            transform: rotate(0deg) scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+        
+        .polaroid img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border: 1px solid #eee;
+        }
+        
+        .polaroid-caption {
+            text-align: center;
+            font-family: 'Dancing Script', cursive;
+            margin-top: 10px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="floating-hearts"></div>
+    
+    <div class="container">
+        <!-- Cabeçalho -->
+        <header class="couple-header">
+            <div class="couple-names">
+                <h1>Para o Meu Amor</h1>
+            </div>
+            <div class="header-subtitle">Cada dia ao seu lado é um presente</div>
+        </header>
+
+        <!-- Player do Spotify -->
+        <section class="music-player-section">
+            <h2 class="section-title">Nossa Música</h2>
+            <div class="spotify-player">
+                <iframe id="spotify-iframe" src="https://open.spotify.com/embed/track/3DAlIobCDPVvUkyDZv5oVp?si=6da65bbb74e345c4" width="100%" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+            </div>
+            <div class="spotify-link">
+                <a href="https://open.spotify.com/intl-pt/track/3DAlIobCDPVvUkyDZv5oVp?si=6da65bbb74e345c4" target="_blank" class="spotify-button">
+                    <i class="fab fa-spotify"></i> Ouvir no Spotify
+                </a>
+            </div>
+        </section>
+
+        <!-- Seção de Vídeo (tamanho reduzido) -->
+        <section class="video-section">
+            <h2 class="video-section-title">Nossos Momentos em Vídeo</h2>
+            <div class="video-container">
+                <!-- Substitua pelo seu vídeo (tamanho será proporcional ao container) -->
+                <video controls style="background-color: #000;">
+                    <source src="WhatsApp Video 2025-06-05 at 17.07.04.mp4" type="video/mp4">
+                    Seu navegador não suporta o elemento de vídeo.
+                </video>
+            </div>
+            <div class="video-description">
+                <p>Este vídeo captura um dos momentos mais especiais que vivemos juntos. Cada segundo ao seu lado é um tesouro que guardo no meu coração.</p>
+            </div>
+        </section>
+
+        <!-- Novo Álbum Polaroid -->
+        <section class="polaroid-album">
+            <h2>Nosso Álbum de Polaroids</h2>
+            
+            <!-- Primeira linha com 3 polaroids -->
+            <div class="polaroid-row">
+                <div class="polaroid">
+                    <img src="WhatsApp Image 2025-06-05 at 17.17.58.jpeg" alt="Momento especial 1">
+                    <div class="polaroid-caption">1 Coríntios 13:4-7
+                        “O amor é paciente, o amor é bondoso. Não inveja, não se vangloria, não se orgulha... Tudo sofre, tudo crê, tudo espera, tudo suporta.”</div>
+                </div>
+                
+                <div class="polaroid">
+                    <img src="WhatsApp Image 2025-06-05 at 17.17.57 (1).jpeg" alt="Momento especial 2">
+                    <div class="polaroid-caption">Eclesiastes 4:9-10
+                        “Melhor é serem dois do que um, porque têm melhor paga do seu trabalho. Porque se caírem, um levanta o companheiro.”</div>
+                </div>
+                
+                <div class="polaroid">
+                    <img src="WhatsApp Image 2025-06-05 at 17.17.55.jpeg" alt="Momento especial 3">
+                    <div class="polaroid-caption">Cantares 8:7
+                        “Nem muitas águas conseguem apagar o amor; rios não conseguem afogá-lo.”</div>
+                </div>
+            </div>
+            
+            <!-- Segunda linha com 3 polaroids -->
+            <div class="polaroid-row">
+                <div class="polaroid">
+                    <img src="WhatsApp Image 2025-06-05 at 17.17.57.jpeg" alt="Momento especial 4">
+                    <div class="polaroid-caption">Efésios 4:2-3
+                        “Sempre humildes, gentis e pacientes, suportando uns aos outros com amor. Façam todo o esforço para conservar a unidade do Espírito pelo vínculo da paz.”</div>
+                </div>
+                
+                <div class="polaroid">
+                    <img src="WhatsApp Image 2025-06-05 at 17.17.56 (1).jpeg" alt="Momento especial 5">
+                    <div class="polaroid-caption">Gênesis 2:24
+                        “Por isso, deixa o homem pai e mãe e se une à sua mulher, tornando-se os dois uma só carne.”</div>
+                </div>
+                
+                <div class="polaroid">
+                    <img src="WhatsApp Image 2025-06-05 at 17.17.56.jpeg" alt="Momento especial 6">
+                    <div class="polaroid-caption">1 João 4:19
+                        “Nós amamos porque Ele nos amou primeiro.”</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cartinha de Amor -->
+        <section class="love-letter-section">
+            <div class="love-letter">
+                <div class="letter-content">
+                    <h2>Para o amor da minha vida</h2>
+                    <div class="letter-body">
+                        <div class="couple-photo">
+                            <img src="WhatsApp Image 2025-06-04 at 22.30.09.jpeg" alt="Nós dois juntos">
+                        </div>
+                        <div class="letter-text">
+                            <p>Meu amor,</p>
+                            <p>Desde o dia que nos conhecemos, minha vida ganhou um novo sentido. Cada momento ao seu lado é especial e guardo cada um no meu coração.</p>
+                            <p>Você é a pessoa mais incrível que já conheci e eu sou grato todos os dias por ter você na minha vida.</p>
+                            <div class="signature">Com todo meu amor,<br>Nathan</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Nossa Timeline -->
+        <section class="timeline-section">
+            <h2 class="section-title">Nossa Linha do Tempo</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">15/03/2022</div>
+                    <div class="timeline-content">
+                        <h3>Primeiro Encontro</h3>
+                        <p>Nos conhecemos na W3 sul e quando eu te vi eu já sabia q era com vc q eu irei me casar.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">01/02/2025</div>
+                    <div class="timeline-content">
+                        <h3>Pedido de Namoro</h3>
+                        <p>Eu te pedi em namoro no Jardim Botanico nós estavamos comemorando seu aniversário e foi o melhor dia da minha vida foi incrivel! </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Envelopes de Memórias -->
+        <section class="envelopes-section">
+            <h2 class="section-title">Nossas Memórias</h2>
+            <div class="envelopes-container">
+                <!-- Primeiro Envelope -->
+                <div class="memory-envelope">
+                    <div class="envelope-front-red"></div>
+                    <div class="memory-content">
+                        <div class="memory-photo">
+                            <img src="WhatsApp Image 2025-06-04 at 22.49.25.jpeg" alt="Nossa memória especial">
+                        </div>
+                        <div class="memory-text">
+                            <h3>Momento Especial</h3>
+                            <p>Texto sobre esse momento especial que vivemos juntos e o que ele significa para mim.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Segundo Envelope -->
+                <div class="memory-envelope">
+                    <div class="envelope-front-red"></div>
+                    <div class="memory-content">
+                        <div class="memory-photo">
+                            <img src="WhatsApp Image 2025-06-04 at 22.25.35.jpeg" alt="Outra memória especial">
+                        </div>
+                        <div class="memory-text">
+                            <h3>Outro Momento Inesquecível</h3>
+                            <p>Descrição desse momento maravilhoso que compartilhamos e como ele fortaleceu nosso amor.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Rodapé -->
+        <footer class="couple-footer">
+            <p>Feito com ❤ especialmente para você</p>
+            <p>Nosso amor é eterno</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
